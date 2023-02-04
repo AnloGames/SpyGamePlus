@@ -1,0 +1,32 @@
+﻿<Window x:Class="SpyGamePlus.GameWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SpyGamePlus"
+        mc:Ignorable="d"
+        Title="GameWindow" Height="450" Width="800" Closed="On_Window_Closed">
+    <Grid>
+        <TextBlock x:Name="Target_lbl" HorizontalAlignment="Left" Margin="436,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="60" Width="154" TextAlignment="Center" FontSize="15" RenderTransformOrigin="0.501,0.548"/>
+        <Grid x:Name="Players_lst" Margin="600,10,10,10" ShowGridLines="True" Width="190" Height="415">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+        </Grid>
+        <ScrollViewer x:Name="Scroll_Chat_scv" Margin="10,10,364,179" VerticalScrollBarVisibility="Visible" Width="425" ScrollChanged="Scroll_Chat_scv_ScrollChanged" Height="245">
+            <TextBlock x:Name="Chat_txt" ScrollViewer.HorizontalScrollBarVisibility="Disabled" TextWrapping="Wrap" FontSize="18" ScrollViewer.CanContentScroll="True"/>
+        </ScrollViewer>
+        <Button x:Name="Yes_btn" Content="Да" HorizontalAlignment="Left" Margin="10,374,0,0" VerticalAlignment="Top" Height="40" Width="100" IsDefault="True" FontSize="20" IsEnabled="False" Click="Yes_btn_Click"/>
+        <Button x:Name="No_btn" Content="Нет" HorizontalAlignment="Left" Margin="330,374,0,0" VerticalAlignment="Top" Height="40" Width="100" IsDefault="True" FontSize="20" RenderTransformOrigin="0.797,0.53" IsEnabled="False" Click="No_btn_Click"/>
+        <Button x:Name="Send_Question_btn" Content="Отправить вопрос выбранному игроку" HorizontalAlignment="Left" Margin="110,374,0,0" VerticalAlignment="Top" Height="40" Width="220" RenderTransformOrigin="0.356,0.657" FontSize="11" IsEnabled="False" Click="Send_Question_btn_Click"/>
+        <TextBox x:Name="Message_txt" HorizontalAlignment="Left" Margin="10,266,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="420" FontSize="16" Height="50" MouseDoubleClick="Message_txt_MouseDoubleClick"/>
+        <Button x:Name="Send_Message_btn" Content="Отправить" HorizontalAlignment="Left" Margin="10,321,0,0" VerticalAlignment="Top" FontSize="16" Height="50" Width="420" IsEnabled="False" Click="Send_Message_btn_Click"/>
+        <TextBox x:Name="Action_txt" HorizontalAlignment="Left" Margin="436,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" FontSize="16" Height="50"/>
+        <Button x:Name="Action_btn" Content="ОК" HorizontalAlignment="Left" Margin="436,180,0,0" VerticalAlignment="Top" Height="50" Width="150" Click="Action_btn_Click" IsEnabled="False"/>
+        <TextBlock x:Name="Action_lbl" HorizontalAlignment="Left" Margin="436,75,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="50" Width="150" FontSize="16" TextAlignment="Center"><Run Language="ru-ru" Text=""/></TextBlock>
+        <TextBlock x:Name="Role_txt" HorizontalAlignment="Left" Margin="436,266,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" TextAlignment="Center" FontSize="16" Height="50" Width="150"/>
+        <TextBlock x:Name="Keyword_txt" HorizontalAlignment="Left" Margin="436,321,0,0" TextWrapping="Wrap" VerticalAlignment="Top" TextAlignment="Center" FontSize="16" Width="150" Height="50"><Run Language="ru-ru" Text="Кодовое слово - "/></TextBlock>
+        <Button x:Name="Change_Mode_btn" Content="Назвать слово" HorizontalAlignment="Left" Margin="436,364,0,0" VerticalAlignment="Top" Width="150" Height="50" FontSize="16" Click="Change_Mode_btn_Click" Visibility="Hidden"/>
+
+    </Grid>
+</Window>

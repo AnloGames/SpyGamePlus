@@ -1,0 +1,17 @@
+﻿<Window x:Class="SpyGamePlus.MenuWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SpyGamePlus"
+        mc:Ignorable="d"
+        Title="MenuWindow" Height="450" Width="800">
+    <Grid>
+        <TextBlock x:Name="Rate_lbl" HorizontalAlignment="Left" Margin="550,100,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontSize="24" FontWeight="Bold"/>
+        <TextBlock x:Name="Name_lbl" HorizontalAlignment="Left" Margin="50,100,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontSize="24" FontWeight="Bold"/>
+        <Button x:Name="Play_btn" Content="Играть" HorizontalAlignment="Center" Margin="0,270,0,0" VerticalAlignment="Top" Height="75" Width="180" FontSize="20" Click="Play_btn_Click"/>
+        <TextBox x:Name="Players_Count_txt" HorizontalAlignment="Center" Margin="0,200,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="180" Height="35" RenderTransformOrigin="0.508,0.476" FontSize="20" TextAlignment="Center"/>
+        <TextBlock x:Name="Clue_lbl" TextWrapping="Wrap" Text="Введите кол-во игроков(4-16):" Margin="310,100,310,242" FontSize="15" TextAlignment="Center"/>
+        <Button x:Name="Cancel_Waiting_btn" Content="Выйти из очереди" HorizontalAlignment="Center" Margin="0,350,0,0" VerticalAlignment="Top" Height="75" Width="180" FontSize="20" Visibility="Hidden" Click="Cancel_Waiting_btn_Click"/>
+    </Grid>
+</Window>
